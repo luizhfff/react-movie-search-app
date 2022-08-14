@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
-
-// Style Imports
 import './style/App.css';
-import './style/showMovieDetailsModal.css'
 
-// Component Imports
-import ShowMovieDetailsModal from './components/ShowMovieDetailsModal';
+import SearchMovies from './components/SearchMovies';
+import ListMovies from './components/ListMovies';
+import Nav from './components/Nav';
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [responseData, setResponseData] = useState()
+
   return (
     <div className="App">
-      <ShowMovieDetailsModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <Nav />
+      <SearchMovies setResponseData={setResponseData}/>
+      <ListMovies movies={responseData}/>
     </div>
   );
 }

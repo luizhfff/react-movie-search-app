@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 .App {
   text-align: center;
+  font-family: 'Poppins';
 }
 
 .App-logo {
@@ -13,21 +16,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +23,150 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  background-color: lightgrey;
+}
+
+.modal-open {
+  display: block;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 10vh;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+  background-color: lightgrey;
+}
+
+.modal-closed {
+  display: none;
+}
+
+.modal-content {
+  background-color: lightgrey;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  height: 70%;
+  text-align: center;
+  overflow: auto;
+}
+
+#modal-button {
+  background-color: #333333;
+  font-size: small;
+  color: #fefefe;
+  border-radius: 2px;
+  padding: 2px 6px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+#modal-content-section {
+  display: flex;
+  padding: 30px;
+}
+
+#movie-poster {
+  display: 1;
+}
+
+#movie-details {
+  display: 2;
+  text-align: left;
+  margin-left: 20px;
+}
+
+#movie-details-columns {
+  display: 1;
+  display: flex;
+}
+
+#movie-details-column-left {
+  display: 1;
+  text-align: left;
+}
+
+#movie-details-column-right {
+  display: 1;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar {
+  height: 7vh;
+  width: 100vw;
+  background-color: #333333;
+  display: inline-block;
+}
+
+#navbar-logo{
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  height: 5vh;
+}
+
+#title {
+  font-size: large;
+  margin: 50px;
+}
+
+#user-input {
+  margin: 10px;
+}
+
+#movie-list {
+  width: 100%;
+  margin-top: 10vh;
+  text-align: center !important;
+}
+
+#movie {
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+#session {
+  position: absolute;
+  color: #fefefe;
+  top: 2vh;
+  right: 5vw;
+}
+
+#movie-title {
+  font-size: larger;
+}
+
+#modal-content-button {
+  background-color: #333333;
+  font-size: medium;
+  color: #fefefe;
+  border-radius: 2px;
+  padding: 6px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 8px;
+  font-weight: bold;
+  width: 100px;
 }
